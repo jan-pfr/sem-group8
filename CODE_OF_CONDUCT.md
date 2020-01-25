@@ -2,7 +2,7 @@
 
 - Team participation  
                   
-        > Communication is the key to success! < 
+      > Communication is the key to success! < 
      
      * Communicate via Discord and check for messages at least once a day.
      * Don´t be late for meetings.
@@ -22,4 +22,4 @@
     * Always test.
     
     
-        > We are stronger as a team! <
+     > We are stronger as a team! <
