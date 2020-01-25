@@ -12,12 +12,11 @@
     
      
 - Peer reviews
-
     * Be professional and tactful when providing review comments.
     * Be open to receiving feedback when others review your work.
 
-- Writing code
 
+- Writing code
     * Adding comments if code is too cryptic.
     * Always test.
     
