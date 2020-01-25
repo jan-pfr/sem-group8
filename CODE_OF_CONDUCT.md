@@ -1,9 +1,9 @@
 #Code of Conduct
 
+    > We are stronger as a TEAM ! <
+
 - Team participation  
-                  
-      > Communication is the key to success! < 
-     
+     * Communication is the key to success!
      * Communicate via Discord and check for messages at least once a day.
      * Don´t be late for meetings.
      * Help - if someone asks for. 
@@ -21,5 +21,3 @@
     * Adding comments if code is too cryptic.
     * Always test.
     
-    
-     > We are stronger as a team! <
