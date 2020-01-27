@@ -5,7 +5,7 @@
 - Release [![Releases](https://img.shields.io/github/release/jan-pfr/sem-group8/all.svg?style=flat-square)](https://github.com/jan-pfr/sem-group8/releases)
 
 ### Our Team
-- 40457584 ([caelumn](https://github.com/caelumn))  __Product Owner__
-- 40457307 ([jan-pfr](https://github.com/jan-pfr)) __Scrum Master__
+- 40457584 ([jan-pfr](https://github.com/jan-pfr))  __Product Owner__
+- 40457307 ([caelumn](https://github.com/caelumn)) __Scrum Master__
 - 40401273 ([RedSpah](https://github.com/RedSpah)) __Developer__
 - 40408619 ([shibigami](https://github.com/shibigami)) __Developer__
