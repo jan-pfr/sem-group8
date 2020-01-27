@@ -6,6 +6,6 @@
 
 ### Our Team
 - 40457584 ([caelumn](https://github.com/caelumn))  __Product Owner__
-- 40457307, ([jan-pfr](https://github.com/jan-pfr)) __Scrum Master__
-- 40401273, ([RedSpah](https://github.com/RedSpah)) __Developer__
-- 40408619, ([shibigami](https://github.com/shibigami)) __Developer__
+- 40457307 ([jan-pfr](https://github.com/jan-pfr)) __Scrum Master__
+- 40401273 ([RedSpah](https://github.com/RedSpah)) __Developer__
+- 40408619 ([shibigami](https://github.com/shibigami)) __Developer__
