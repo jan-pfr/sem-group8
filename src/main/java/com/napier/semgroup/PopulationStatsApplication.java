@@ -10,7 +10,7 @@ public class PopulationStatsApplication {
      */
     public static void main (String[] args){
 
-        System.out.println("Hello World, this is the main class of the coursework 8.\nSend Help");
+        System.out.println("Hello World, this is the main class of the coursework 8.");
 
     }
 }
