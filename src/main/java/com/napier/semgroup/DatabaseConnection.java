@@ -3,8 +3,12 @@ package com.napier.semgroup;
 import java.sql.*;
 
 public class DatabaseConnection {
+    /**
+     * Connection to MySQL database.
+     */
+    private Connection con = null;
 
-    @Override
+    //@Override
     public void connect()
     {
         try
@@ -42,7 +46,7 @@ public class DatabaseConnection {
             }
         }
     }
-    @Override
+    //@Override
     public void disconnect()
     {
         if (con != null)
