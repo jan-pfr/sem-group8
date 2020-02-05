@@ -12,5 +12,12 @@ public class PopulationStatsApplication {
 
         System.out.println("Hello World, this is the main class of the coursework 8.");
 
+
+
+        DatabaseConnection dbcon = new MySQLConnectionHandler();
+        dbcon.connect();
+
+        BusinessLogic businessLogic = new BusinessLogic(dbcon);
+        businessLogic.getAllCountries();
     }
 }
