@@ -16,8 +16,6 @@ public class PopulationStatsApplication {
 
         DatabaseConnection dbcon = new MySQLConnectionHandler();
         dbcon.connect();
-
-        BusinessLogic businessLogic = new BusinessLogic(dbcon);
-        businessLogic.getAllCountries();
+        dbcon.disconnect();
     }
 }
