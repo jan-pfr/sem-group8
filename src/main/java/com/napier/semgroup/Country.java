@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Country {
 
     /*
-     *Country's ID
+     *Country's Code
      */
     ArrayList<String> code = new ArrayList<String>();
 

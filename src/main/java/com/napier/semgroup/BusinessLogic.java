@@ -10,7 +10,8 @@ public class BusinessLogic {
 
     public void getAllCountries() {
         //...
-        databaseConnection.execute("SELECT * FROM country");
+        Country country = new Country();
+        databaseConnection.execute("SELECT * FROM country", country );
         //... return
 
     }
