@@ -9,11 +9,8 @@ public interface DatabaseConnection {
     void disconnect();
 
 
-    ResultSet execute(String query, Country country);
+    ResultSet execute(String query);
 
-    ResultSet execute(String query, City city);
-
-    ResultSet execute(String query, CountryLanguage countryLanguage);
 
 
 }

@@ -1,5 +1,7 @@
 package com.napier.semgroup;
 
+import java.sql.ResultSet;
+
 public class BusinessLogic {
 
     private DatabaseConnection databaseConnection;
@@ -10,8 +12,9 @@ public class BusinessLogic {
 
     public void getAllCountries() {
         //...
-        Country country = new Country();
-        databaseConnection.execute("SELECT * FROM country", country );
+        ResultSet rset = databaseConnection.execute("SELECT * FROM country");
+        
+
         //... return
 
     }

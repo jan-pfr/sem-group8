@@ -51,7 +51,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
     }
 
     @Override
-    public ResultSet execute(String query , Country country) {
+    public ResultSet execute(String query) {
         {
             try {
                 // Create an SQL statement
@@ -60,40 +60,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
                 ResultSet rset = stmt.executeQuery(query);
                 // Return new employee if valid.
                 // Check one is returned
-                if (rset.next()) {
-                    //Employee emp = new Employee();
-                    //emp.emp_no = rset.getInt("emp_no");
-                    //emp.first_name = rset.getString("first_name");
-                    //emp.last_name = rset.getString("last_name");
-                    return null;//emp;
-                } else
-                    return null;
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("Failed to get details");
-                return null;
-            }
-        }
-
-    }
-    @Override
-    public ResultSet execute(String query , City city) {
-        {
-            try {
-                // Create an SQL statement
-                Statement stmt = con.createStatement();
-                // Execute SQL statement
-                ResultSet rset = stmt.executeQuery(query);
-                // Return new employee if valid.
-                // Check one is returned
-                if (rset.next()) {
-                    //Employee emp = new Employee();
-                    //emp.emp_no = rset.getInt("emp_no");
-                    //emp.first_name = rset.getString("first_name");
-                    //emp.last_name = rset.getString("last_name");
-                    return null;//emp;
-                } else
-                    return null;
+                return rset;
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 System.out.println("Failed to get details");
@@ -103,30 +70,4 @@ public class MySQLConnectionHandler implements DatabaseConnection {
 
     }
 
-    @Override
-    public ResultSet execute(String query , CountryLanguage countryLanguage) {
-        {
-            try {
-                // Create an SQL statement
-                Statement stmt = con.createStatement();
-                // Execute SQL statement
-                ResultSet rset = stmt.executeQuery(query);
-                // Return new employee if valid.
-                // Check one is returned
-                if (rset.next()) {
-                    //Employee emp = new Employee();
-                    //emp.emp_no = rset.getInt("emp_no");
-                    //emp.first_name = rset.getString("first_name");
-                    //emp.last_name = rset.getString("last_name");
-                    return null;//emp;
-                } else
-                    return null;
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("Failed to get details");
-                return null;
-            }
-        }
-
-    }
 }
