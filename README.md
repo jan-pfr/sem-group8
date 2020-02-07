@@ -9,3 +9,4 @@
 - 40457307 ([caelumn](https://github.com/caelumn)) __Scrum Master__
 - 40401273 ([RedSpah](https://github.com/RedSpah)) __Developer__
 - 40408619 ([shibigami](https://github.com/shibigami)) __Developer__
+
