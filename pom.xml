@@ -21,7 +21,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.napier.semgroup.PopulationStatsApplication</mainClass>
+                            <mainClass>com.napier.semgroup.app.PopulationStatsApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

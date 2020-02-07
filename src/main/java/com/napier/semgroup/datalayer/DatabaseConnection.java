@@ -1,4 +1,4 @@
-package com.napier.semgroup;
+package com.napier.semgroup.datalayer;
 
 import java.sql.ResultSet;
 

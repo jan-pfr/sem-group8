@@ -1,4 +1,4 @@
-package com.napier.semgroup;
+package com.napier.semgroup.reports;
 
 public class Population {
 

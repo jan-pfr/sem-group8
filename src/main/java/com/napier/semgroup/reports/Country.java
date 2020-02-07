@@ -1,4 +1,4 @@
-package com.napier.semgroup;
+package com.napier.semgroup.reports;
 
 public class Country {
 
@@ -32,4 +32,15 @@ public class Country {
      */
     public Integer  capital;
 
+    @Override
+    public String toString() {
+        return "Country{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", continent='" + continent + '\'' +
+                ", region='" + region + '\'' +
+                ", population=" + population +
+                ", capital=" + capital +
+                '}';
+    }
 }

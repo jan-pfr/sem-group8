@@ -1,4 +1,4 @@
-package com.napier.semgroup;
+package com.napier.semgroup.datalayer;
 
 import java.sql.*;
 
@@ -30,7 +30,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + i);
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
@@ -56,11 +56,8 @@ public class MySQLConnectionHandler implements DatabaseConnection {
             try {
                 // Create an SQL statement
                 Statement stmt = con.createStatement();
-                // Execute SQL statement
-                ResultSet rset = stmt.executeQuery(query);
-                // Return new employee if valid.
-                // Check one is returned
-                return rset;
+                // Execute SQL statement and return result
+                return stmt.executeQuery(query);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 System.out.println("Failed to get details");

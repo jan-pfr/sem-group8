@@ -1,6 +1,5 @@
-package com.napier.semgroup;
+package com.napier.semgroup.reports;
 
-import java.util.ArrayList;
 
 public class City {
     /*
