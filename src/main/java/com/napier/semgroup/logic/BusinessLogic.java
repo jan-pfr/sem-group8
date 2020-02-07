@@ -16,6 +16,8 @@ public class BusinessLogic {
         this.databaseConnection = databaseConnection;
     }
 
+
+
     //this is a example method how to handle the result of the query.
     public List <Country> getAllCountries() {
         ResultSet rset = databaseConnection.execute("SELECT * FROM country");

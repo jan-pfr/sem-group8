@@ -14,16 +14,21 @@ public class PopulationStatsApplication {
      * @param args The Arguments
      */
     public static void main (String[] args){
+        /*
+         * Start the Application via the docker compose file. The DB had to be started once.
+         * When you change something in the code and want to test it, make sure you have packed the jar over marven
+         * and deleted the old image in docker, otherwise the new code will not be executed.
+         * Do this steps all the time you want to try new code snippets.
+         */
+        DatabaseConnection dbcon = new MySQLConnectionHandler(); //new object
+        dbcon.connect(); //connection to database
+        BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
 
-        System.out.println("Hello World, this is the main class of the coursework 8.");
-        DatabaseConnection dbcon = new MySQLConnectionHandler();
-        dbcon.connect();
-        BusinessLogic businessLogic = new BusinessLogic(dbcon);
-    System.out.println("Code");
+        //execute the method getAllCountries and output.
         for (Country c : businessLogic.getAllCountries()) {
             System.out.println(c);
         }
 
-        dbcon.disconnect();
+        dbcon.disconnect(); // disconnect database.
     }
 }
