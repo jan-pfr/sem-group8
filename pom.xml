@@ -6,7 +6,7 @@
 
     <groupId>com.napier.semgroup</groupId>
     <artifactId>sem-group8</artifactId>
-    <version>0.1.0.2</version>
+    <version>0.1.0.3</version>
     <properties>
         <java.version>13</java.version>
         <maven.compiler.source>11</maven.compiler.source>
@@ -21,7 +21,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.napier.semgroup.PopulationStatsApplication</mainClass>
+                            <mainClass>com.napier.semgroup.app.PopulationStatsApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -43,9 +43,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver</artifactId>
-            <version>3.6.4</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.44</version>
         </dependency>
     </dependencies>
 
