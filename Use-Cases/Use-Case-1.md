@@ -36,7 +36,7 @@ A request for the population information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information organised by largest to smallest for a given country.
+1. Organisation request population information organised by largest to smallest.
 2. User searches for the population of the countries in the world, continent and region.
 3. User extracts current population information of all countries of the world, continent and region.
 4. User provides report to organisation.

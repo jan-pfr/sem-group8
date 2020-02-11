@@ -36,7 +36,7 @@ A request for the population of cities information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of cities organised by largest to smallest for a given country.
+1. Organisation request population information of cities organised by largest to smallest.
 2. User searches population of cities in the world, continent, region, country and district.
 3. User extracts current population of cities in the world, continent, region, country and district.
 4. User provides report to organisation.

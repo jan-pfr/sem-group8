@@ -36,7 +36,7 @@ A request for the Top 5 populated countries information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request Top 5 populated countries information organised by largest to smallest for a given country.
+1. Organisation request Top 5 populated countries information organised by largest to smallest.
 2. User searches for the Top 5 populated countries in the world, continent and region.
 3. User extracts current Top 5 populated countries information in of the world, continent and region.
 4. User provides report to organisation.
