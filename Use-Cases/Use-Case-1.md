@@ -1,4 +1,4 @@
-# USE CASE: 1 Produce a Report on the Population of Countries in the world, continent and region
+# USE CASE: 1 Produce a Report on the population of countries in the world, continent and region
 
 ## CHARACTERISTIC INFORMATION
 
@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the role.  Database contains current population data.
+We know the population of countries in the world, continent and region.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,12 +32,12 @@ User.
 
 ### Trigger
 
-A request for the population information is sent to User.
+A request for the population of countries in the world, continent and region information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information organised by largest to smallest.
-2. User searches for the population of the countries in the world, continent and region.
+1. Organisation request country population information for the world, continent and region organised by largest to smallest.
+2. User searches for the country population in the world, continent and region.
 3. User extracts current population information of all countries of the world, continent and region.
 4. User provides report to organisation.
 
