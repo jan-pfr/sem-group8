@@ -1,4 +1,4 @@
-# USE CASE: 1 Produce a Report on the Top 5 populated cities in the world, continent, region, country and district
+# USE CASE: 4 Produce a Report on the Top 5 populated cities in the world, continent, region, country and district
 
 ## CHARACTERISTIC INFORMATION
 

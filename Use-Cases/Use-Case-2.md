@@ -1,4 +1,4 @@
-# USE CASE: 1 Produce a Report on the Top 5 populated Countries in the world, continent and region
+# USE CASE: 2 Produce a Report on the Top 5 populated Countries in the world, continent and region
 
 ## CHARACTERISTIC INFORMATION
 

@@ -1,4 +1,4 @@
-# USE CASE: 1 Produce a Report of the population of cities in the world, continent, region, country and district
+# USE CASE: 3 Produce a Report of the population of cities in the world, continent, region, country and district
 
 ## CHARACTERISTIC INFORMATION
 
