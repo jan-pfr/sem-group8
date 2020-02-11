@@ -1,4 +1,4 @@
-# USE CASE: 5 Produce a Report for languages spoken in the world including the percentage of the world population  
+# USE CASE: 8 Produce a Report for languages spoken in the world including the percentage of the world population  
 
 ## CHARACTERISTIC INFORMATION
 
@@ -40,7 +40,8 @@ A request for languages spoken in the world including the percentage of the worl
 2. User searches for languages spoken in the world.
 3. User extracts current spoken languages in the world.
 4. User searches for current population percentage of the world.
-4. User provides report to organisation.
+5. User sorts languages spoken from greatest to smallest and compares it with the population of the world.
+6. User provides report to organisation.
 
 ## EXTENSIONS
 
