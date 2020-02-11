@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the countries.  Database contains current population data.
+We know the population of countries in the world, continent and region.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,11 +32,11 @@ User.
 
 ### Trigger
 
-A request for the Top 5 populated countries information is sent to User.
+A request for the Top 5 populated countries in the world, continent and region information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request Top 5 populated countries information organised by largest to smallest.
+1. Organisation request Top 5 populated countries in the world, continent and region organised by largest to smallest.
 2. User searches for the Top 5 populated countries in the world, continent and region.
 3. User extracts current Top 5 populated countries information in of the world, continent and region.
 4. User provides report to organisation.
