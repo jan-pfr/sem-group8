@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the capital cities.  Database contains current population data.
+We know the population of the capital cities in the world, continent and region.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,11 +32,11 @@ User.
 
 ### Trigger
 
-A request for the population of capital cities information is sent to User.
+A request for the population of capital cities in the world, continent and region information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of capital cities organised by largest to smallest.
+1. Organisation request population information of capital cities in the world, continent and region organised by largest to smallest.
 2. User searches population of capital cities in the world, continent and region.
 3. User extracts current population of capital cities in the world, continent and region.
 4. User provides report to organisation.
