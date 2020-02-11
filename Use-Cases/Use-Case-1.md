@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As an *User* I want *the countries in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
+As an *User* I want *the population of countries in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
 
 ### Scope
 
@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the role.  Database contains current employee data.
+We know the role.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,7 +32,7 @@ User.
 
 ### Trigger
 
-A request for a population information is sent to User.
+A request for the population information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
