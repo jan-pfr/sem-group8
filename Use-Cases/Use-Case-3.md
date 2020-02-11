@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the cities.  Database contains current population data.
+We know the cities in the world, continent, region, country and district.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,11 +32,11 @@ User.
 
 ### Trigger
 
-A request for the population of cities information is sent to User.
+A request for the population of cities in the world, continent, region, country and district information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of cities organised by largest to smallest.
+1. Organisation request population information of cities in the world, continent, region, country and district organised by largest to smallest.
 2. User searches population of cities in the world, continent, region, country and district.
 3. User extracts current population of cities in the world, continent, region, country and district.
 4. User provides report to organisation.
