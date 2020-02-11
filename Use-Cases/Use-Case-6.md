@@ -1,4 +1,4 @@
-# USE CASE: 5 Produce a Report of the Top 5 populated capital cities in the world, continent and region
+# USE CASE: 6 Produce a Report of the Top 5 populated capital cities in the world, continent and region
 
 ## CHARACTERISTIC INFORMATION
 
@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the capital cities.  Database contains current population data.
+We know the population of capital cities in the world, continent and region.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,13 +32,13 @@ User.
 
 ### Trigger
 
-A request for the the Top 5 populated capital cities information is sent to User.
+A request for the the Top 5 populated capital cities in the world, continent and region information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of the Top 5 capital cities in the world, continent and region organised by largest to smallest.
-2. User searches population of the Top 5 capital cities in the world, continent and region.
-3. User extracts current population of the Top 5 capital cities in the world, continent and region.
+1. Organisation request information of the Top 5 populated capital cities in the world, continent and region organised by largest to smallest.
+2. User searches the Top 5 populated capital cities in the world, continent and region.
+3. User extracts current Top 5 populated capital cities in the world, continent and region.
 4. User provides report to organisation.
 
 ## EXTENSIONS
