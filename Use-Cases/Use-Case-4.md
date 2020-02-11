@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the cities.  Database contains current population data.
+We know the population of cities in the world, continent, region, country and district.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,11 +32,11 @@ User.
 
 ### Trigger
 
-A request for the Top 5 populated cities information is sent to User.
+A request for the Top 5 populated cities in the world, continent, region, country and district information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request Top 5 populated cities information organised by largest to smallest.
+1. Organisation request Top 5 populated cities in the world, continent, region, country and district information organised by largest to smallest.
 2. User searches for the Top 5 populated cities in the world, continent, region, country and district.
 3. User extracts current Top 5 populated cities information in of the world, continent, region, country and district.
 4. User provides report to organisation.

@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the cities in the world, continent, region, country and district.  Database contains current population data.
+We know the population of cities in the world, continent, region, country and district.  Database contains current population data.
 
 ### Success End Condition
 
