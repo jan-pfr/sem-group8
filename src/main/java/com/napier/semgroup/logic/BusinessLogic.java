@@ -63,30 +63,6 @@ public class BusinessLogic {
 
 
 
-    //this is a example method how to handle the result of the query.
-    public List <Country> getAllCountries() {
-        ResultSet rset = databaseConnection.execute("SELECT * FROM country");
-
-        try {
-            ArrayList <Country> countryArrayList = new ArrayList<>();
-            while (rset.next())
-            {
-                Country country = new Country();
-                country.code = rset.getString("Code");
-                country.name = rset.getString("Name");
-                country.continent = rset.getString("Continent");
-                country.region = rset.getString("Region");
-                country.population = rset.getInt("Population");
-          //      country.capital = rset.getInt("Capital");
-                countryArrayList.add(country);
-            }
-            return countryArrayList;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     // #1 - All the countries in the world organized by largest population to smallest
     public List<Country> getAllCountriesOrganizedByPopulation()
     {
@@ -102,6 +78,7 @@ public class BusinessLogic {
         if (!validateContinent(continentName))
         {
             System.out.println("Error: " + continentName + " is an invalid continent name.");
+            return null;
         }
 
         return executeQueryAndParseCountries("select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
@@ -117,6 +94,7 @@ public class BusinessLogic {
         if (!validateRegion(regionName))
         {
             System.out.println("Error: " + regionName + " is an invalid region name.");
+            return null;
         }
 
         return executeQueryAndParseCountries("select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
@@ -124,6 +102,65 @@ public class BusinessLogic {
                 "left join city on Capital=city.ID\n" +
                 "where country.Region='" + regionName + "' \n" +
                 "order by country.population desc");
+    }
+
+    // #4 - The top N populated countries in the world organized by largest population to smallest
+    public List<Country> getNCountriesOrganizedByPopulation(int N)
+    {
+        if (N < 1)
+        {
+            System.out.println("Error: Amount of countries provided must be positive- " + N + " provided.");
+            return null;
+        }
+
+        return executeQueryAndParseCountries("select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
+                "from country \n" +
+                "left join city on Capital=city.ID\n" +
+                "order by country.population desc limit " + N);
+    }
+
+    // #5 - The top N populated countries in a continent organised by largest population to smallest.
+    public List<Country> getNCountriesInContinentOrganizedByPopulation(int N, String continentName)
+    {
+        if (N < 1)
+        {
+            System.out.println("Error: Amount of countries provided must be positive- " + N + " provided.");
+            return null;
+        }
+
+        if (!validateContinent(continentName))
+        {
+            System.out.println("Error: " + continentName + " is an invalid continent name.");
+            return null;
+        }
+
+        return executeQueryAndParseCountries("select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
+                "from country \n" +
+                "left join city on Capital=city.ID\n" +
+                "where country.Continent='" + continentName + "' \n" +
+                "order by country.population desc limit " + N);
+    }
+
+    // #6 - The top N populated countries in a region organised by largest population to smallest.
+    public List<Country> getNCountriesInRegionOrganizedByPopulation(int N, String regionName)
+    {
+        if (N < 1)
+        {
+            System.out.println("Error: Amount of countries provided must be positive- " + N + " provided.");
+            return null;
+        }
+
+        if (!validateRegion(regionName))
+        {
+            System.out.println("Error: " + regionName + " is an invalid region name.");
+            return null;
+        }
+
+        return executeQueryAndParseCountries("select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
+                "from country \n" +
+                "left join city on Capital=city.ID\n" +
+                "where country.Region='" + regionName + "' \n" +
+                "order by country.population desc limit " + N);
     }
 
 }
