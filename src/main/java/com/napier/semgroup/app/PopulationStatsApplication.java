@@ -25,7 +25,23 @@ public class PopulationStatsApplication {
         BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
 
         //execute the method getAllCountries and output.
-        for (Country c : businessLogic.getAllCountries()) {
+        //for (Country c : businessLogic.getAllCountriesOrganizedByPopulation()) {
+        //    System.out.println(c);
+       // }
+
+        for (Country c : businessLogic.getAllCountriesInContinentOrganizedByPopulation("Europe")) {
+            System.out.println(c);
+        }
+
+        for (Country c : businessLogic.getAllCountriesInContinentOrganizedByPopulation("South America")) {
+            System.out.println(c);
+        }
+
+        for (Country c : businessLogic.getAllCountriesInRegionOrganizedByPopulation("Middle East")) {
+            System.out.println(c);
+        }
+
+        for (Country c : businessLogic.getAllCountriesInRegionOrganizedByPopulation("Southeast Asia")) {
             System.out.println(c);
         }
 

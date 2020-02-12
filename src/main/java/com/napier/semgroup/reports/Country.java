@@ -30,7 +30,7 @@ public class Country {
     /*
      *Country's Capital
      */
-    public Integer  capital;
+    public String  capital;
 
     @Override
     public String toString() {
@@ -40,7 +40,7 @@ public class Country {
                 ", continent='" + continent + '\'' +
                 ", region='" + region + '\'' +
                 ", population=" + population +
-                ", capital=" + capital +
+                ", capital=" + (capital == null ? "None" : capital) +
                 '}';
     }
 }
