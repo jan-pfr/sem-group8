@@ -1,10 +1,10 @@
-# USE CASE: 5 Produce a Report of the population of capital cities in the world, continent and region
+# USE CASE: 5 Produce a Report for languages spoken in the world including the percentage of the world population  
 
 ## CHARACTERISTIC INFORMATION
 
 ### Goal in Context
 
-As an *User* I want *the population of capital cities in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
+As an *User* I want *the spoken language Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
 
 ### Scope
 
@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the population of the capital cities in the world, continent and region.  Database contains current population data.
+We know which country speaks which language. We know the overall population of the world.  Database contains current population data.
 
 ### Success End Condition
 
@@ -32,14 +32,16 @@ User.
 
 ### Trigger
 
-A request for the population of capital cities in the world, continent and region information is sent to User.
+A request for languages spoken in the world including the percentage of the world population information is sent to User.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of capital cities in the world, continent and region organised by largest to smallest.
-2. User searches population of capital cities in the world, continent and region.
-3. User extracts current population of capital cities in the world, continent and region.
-4. User provides report to organisation.
+1. Organisation request languages spoken in the world including the percentage of the world population organised by the greatest to smallest.
+2. User searches for languages spoken in the world.
+3. User extracts current spoken languages in the world.
+4. User searches for current population percentage of the world.
+5. User sorts languages spoken from greatest to smallest and compares it with the population of the world.
+6. User provides report to organisation.
 
 ## EXTENSIONS
 
