@@ -15,11 +15,11 @@ Primary task.
 
 ### Preconditions
 
-We know the population of the world. We know the population of cities.  Database contains current population data.
+Database contains current population data of capital cities in the world.
 
 ### Success End Condition
 
-A report is available to provide.
+A report for population in cities and not living in cities has been created.
 
 ### Failed End Condition
 
@@ -31,24 +31,24 @@ User.
 
 ### Trigger
 
-A request for the population of people, people living in cities and people not living in cities information is sent to User.
+Organisation wants a report for the current population of cities and non cities.
 
-## MAIN SUCCESS SCENARIO
+### MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of population of people, people living in cities and people not living in cities organised by largest to smallest for each continent, region and country.
-2. User searches population of population of people, people living in cities and people not living in cities for each continent, region and country.
-3. User extracts current population of people, people living in cities and people not living in cities for each continent, region and country.
+1. Organisation request a report for current population of cities and non cities.
+2. System provides requested data
+3. User extracts current population information from the system.
 4. User provides report to organisation.
 
-## EXTENSIONS
+### EXTENSIONS
 
 3. **Database does not connect**:
     1. User informs developer that database is not connecting.
 
-## SUB-VARIATIONS
+### SUB-VARIATIONS
 
 None.
 
-## SCHEDULE
+### SCHEDULE
 
 **DUE DATE**: Release 1.0

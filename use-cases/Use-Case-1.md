@@ -16,11 +16,11 @@ Primary task.
 
 ### Preconditions
 
-We know the population of countries in the world, continent and region.  Database contains current population data.
+Database contains current population data for the world, continent and region.
 
 ### Success End Condition
 
-A report is available to provide.
+A report for population in the world, continent and region has been created.
 
 ### Failed End Condition
 
@@ -32,24 +32,24 @@ User.
 
 ### Trigger
 
-A request for the population of countries in the world, continent and region information is sent to User.
+Organisation wants a report for the current population in the world, continents and regions.
 
-## MAIN SUCCESS SCENARIO
+### MAIN SUCCESS SCENARIO
 
-1. Organisation request country population information for the world, continent and region organised by largest to smallest.
-2. User searches for the country population in the world, continent and region.
-3. User extracts current population information of all countries of the world, continent and region.
+1. Organisation request a report for current population of countries.
+2. System provides requested data
+3. User extracts current population information from the system.
 4. User provides report to organisation.
 
-## EXTENSIONS
+### EXTENSIONS
 
 3. **Database does not connect**:
     1. User informs developer that database is not connecting.
 
-## SUB-VARIATIONS
+### SUB-VARIATIONS
 
 None.
 
-## SCHEDULE
+### SCHEDULE
 
 **DUE DATE**: Release 1.0

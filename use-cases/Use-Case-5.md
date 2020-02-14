@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As an *User* I want *the spoken language Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
+As an *User* I want *the spoken languages Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
 
 ### Scope
 
@@ -16,11 +16,11 @@ Primary task.
 
 ### Preconditions
 
-We know which country speaks which language. We know the overall population of the world.  Database contains current population data.
+Database contains spoken languages in the world data.
 
 ### Success End Condition
 
-A report is available to provide.
+A report for spoken language has been created.
 
 ### Failed End Condition
 
@@ -32,26 +32,24 @@ User.
 
 ### Trigger
 
-A request for languages spoken in the world including the percentage of the world population information is sent to User.
+Organisation wants a report for the current spoken languages.
 
-## MAIN SUCCESS SCENARIO
+### MAIN SUCCESS SCENARIO
 
-1. Organisation request languages spoken in the world including the percentage of the world population organised by the greatest to smallest.
-2. User searches for languages spoken in the world.
-3. User extracts current spoken languages in the world.
-4. User searches for current population percentage of the world.
-5. User sorts languages spoken from greatest to smallest and compares it with the population of the world.
-6. User provides report to organisation.
+1. Organisation request a report on the current spoken languages.
+2. System provides requested data
+3. User extracts current spoken languages information from the system.
+4. User provides report to organisation.
 
-## EXTENSIONS
+### EXTENSIONS
 
 3. **Database does not connect**:
     1. User informs developer that database is not connecting.
 
-## SUB-VARIATIONS
+### SUB-VARIATIONS
 
 None.
 
-## SCHEDULE
+### SCHEDULE
 
 **DUE DATE**: Release 1.0
