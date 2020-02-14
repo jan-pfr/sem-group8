@@ -1,0 +1,39 @@
+@startuml
+
+actor User as "User"
+
+Organisation --|> User
+
+rectangle DB as "Database"
+
+rectangle "Population Stats Application" {
+
+    usecase UC1 as "Create a report \nfor population of \n countries"
+    usecase UC2 as "Create a report \nfor population of \n cities"
+    usecase UC3 as "Create a report \nfor population of \n capital cities"
+    usecase UC4 as "Create a report \nfor population of \n cities and non citites"
+    usecase UC5 as "Create a report \nfor spoken languages"
+
+    usecase Provide as "Provide Report"
+
+    User - UC5
+    User - UC4
+    User - UC3
+    User - UC2
+    User - UC1
+
+    UC1 - DB
+    UC2 - DB
+    UC3 - DB
+    UC4 - DB
+    UC5 - DB
+
+    UC1 ..> Provide : include
+    UC2 ..> Provide : include
+    UC3 ..> Provide : include
+    UC4 ..> Provide : include
+    UC5 ..> Provide : include
+
+}
+
+@enduml
