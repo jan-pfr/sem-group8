@@ -1,10 +1,10 @@
-# USE CASE: 5 Produce a Report of the population of capital cities in the world, continent and region
+# USE CASE: 5 Produce a Report for languages spoken in the world including the percentage of the world population  
 
 ## CHARACTERISTIC INFORMATION
 
 ### Goal in Context
 
-As an *User* I want *the population of capital cities in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
+As an *User* I want *the spoken languages Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
 
 ### Scope
 
@@ -16,11 +16,11 @@ Primary task.
 
 ### Preconditions
 
-We know the population of the capital cities in the world, continent and region.  Database contains current population data.
+Database contains spoken languages in the world data.
 
 ### Success End Condition
 
-A report is available to provide.
+A report for spoken language has been created.
 
 ### Failed End Condition
 
@@ -32,24 +32,24 @@ User.
 
 ### Trigger
 
-A request for the population of capital cities in the world, continent and region information is sent to User.
+Organisation wants a report for the current spoken languages.
 
-## MAIN SUCCESS SCENARIO
+### MAIN SUCCESS SCENARIO
 
-1. Organisation request population information of capital cities in the world, continent and region organised by largest to smallest.
-2. User searches population of capital cities in the world, continent and region.
-3. User extracts current population of capital cities in the world, continent and region.
+1. Organisation request a report on the current spoken languages.
+2. System provides requested data
+3. User extracts current spoken languages information from the system.
 4. User provides report to organisation.
 
-## EXTENSIONS
+### EXTENSIONS
 
 3. **Database does not connect**:
     1. User informs developer that database is not connecting.
 
-## SUB-VARIATIONS
+### SUB-VARIATIONS
 
 None.
 
-## SCHEDULE
+### SCHEDULE
 
 **DUE DATE**: Release 1.0
