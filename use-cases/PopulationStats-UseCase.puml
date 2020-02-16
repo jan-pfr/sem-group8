@@ -1,6 +1,11 @@
 @startuml
 
 left to right direction
+
+Title Use Case diagram
+
+' ======= the actors =========
+
 actor User as "User"
 
 Organisation --|> User
@@ -12,11 +17,11 @@ rectangle "Population Stats Application" {
 
     ' ====== the use cases =========
 
-    usecase UC1 as "Create a report \nfor population of \n countries"
-    usecase UC2 as "Create a report \nfor population of \n cities"
-    usecase UC3 as "Create a report \nfor population of \n capital cities"
-    usecase UC4 as "Create a report \nfor population of \n cities and non citites"
-    usecase UC5 as "Create a report \nfor spoken languages"
+    usecase UC1 as "Create a report \n for population of \n countries"
+    usecase UC2 as "Create a report \n for population of \n cities"
+    usecase UC3 as "Create a report \n for population of \n capital cities"
+    usecase UC4 as "Create a report \n for population of \n cities and non cities"
+    usecase UC5 as "Create a report \n for spoken languages"
 
 
     User -- UC5
