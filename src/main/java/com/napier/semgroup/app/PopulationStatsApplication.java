@@ -2,8 +2,10 @@ package com.napier.semgroup.app;
 
 import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.datalayer.MySQLConnectionHandler;
+import com.napier.semgroup.gui.ViewController;
 import com.napier.semgroup.logic.BusinessLogic;
 import com.napier.semgroup.reports.Country;
+import javafx.stage.Stage;
 
 /**
  * This class starts you program to easy access population information.
@@ -14,6 +16,8 @@ public class PopulationStatsApplication {
      * @param args The Arguments
      */
     public static void main (String[] args){
+
+        ViewController viewController = new ViewController();
 
         DatabaseConnection dbcon = new MySQLConnectionHandler(); //new object
         dbcon.connect(); //connection to database
