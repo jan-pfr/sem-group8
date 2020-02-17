@@ -32,15 +32,9 @@ public class Country {
      */
     public String  capital;
 
-    @Override
+
     public String toString() {
-        return "Country{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", continent='" + continent + '\'' +
-                ", region='" + region + '\'' +
-                ", population=" + population +
-                ", capital=" + (capital == null ? "None" : capital) +
-                '}';
+        return String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
+                code, name, continent, region, population, capital);
     }
 }
