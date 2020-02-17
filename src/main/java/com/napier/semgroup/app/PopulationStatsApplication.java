@@ -19,34 +19,42 @@ public class PopulationStatsApplication {
         dbcon.connect(); //connection to database
         BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
 
-        //execute the method getAllCountries and output.
+        //execute all methods and output for debug.
+        System.out.println("#1______________________________________");
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
                 "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesOrganizedByPopulation(5)) {
+        for (Country c : businessLogic.getAllCountriesOrganizedByPopulation()) {
             System.out.println(c);
         }
-        System.out.println("______________________________________");
+
+        System.out.println("#2______________________________________");
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
                 "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInContinentOrganizedByPopulation(7, "Europe")) {
+        for (Country c : businessLogic.getAllCountriesInContinentOrganizedByPopulation("Europe")) {
             System.out.println(c);
         }
-        System.out.println("______________________________________");
+        System.out.println("#3______________________________________");
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
                 "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInContinentOrganizedByPopulation(1, "South America")) {
+        for (Country c : businessLogic.getAllCountriesInRegionOrganizedByPopulation( "Middle East")) {
             System.out.println(c);
         }
-        System.out.println("______________________________________");
+        System.out.println("#4______________________________________");
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
                 "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(9, "Middle East")) {
+        for (Country c : businessLogic.getNCountriesOrganizedByPopulation(20)) {
             System.out.println(c);
         }
-        System.out.println("______________________________________");
+        System.out.println("#5______________________________________");
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
                 "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(2, "Southeast Asia")) {
+        for (Country c : businessLogic.getNCountriesInContinentOrganizedByPopulation(20, "Africa")) {
+            System.out.println(c);
+        }
+        System.out.println("#6______________________________________");
+        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
+                "Code", "Name", "Continent", "Region", "Population", "Capital"));
+        for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe")) {
             System.out.println(c);
         }
 
