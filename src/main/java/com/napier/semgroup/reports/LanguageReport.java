@@ -12,4 +12,8 @@ public class LanguageReport {
      *The Percentage of the language spoken in the country.
      */
     public double percentage;
+    public String toString() {
+        return String.format("%-52s %-26s",
+                name, percentage);
+    }
 }
