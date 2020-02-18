@@ -9,9 +9,13 @@ import java.io.IOException;
 public class ViewController extends Application {
     private static Scene scene;
 
+    public ViewController() {
+        //launch();
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("mainview"));
+        scene = new Scene(loadFXML("/layouts/mainview"));
         stage.setScene(scene);
         stage.show();
     }

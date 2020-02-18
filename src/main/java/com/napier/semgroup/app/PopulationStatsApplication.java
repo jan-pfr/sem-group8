@@ -5,6 +5,7 @@ import com.napier.semgroup.datalayer.MySQLConnectionHandler;
 import com.napier.semgroup.gui.ViewController;
 import com.napier.semgroup.logic.BusinessLogic;
 import com.napier.semgroup.reports.Country;
+import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
@@ -17,11 +18,13 @@ public class PopulationStatsApplication {
      */
     public static void main (String[] args){
 
-        ViewController viewController = new ViewController();
 
         DatabaseConnection dbcon = new MySQLConnectionHandler(); //new object
         dbcon.connect(); //connection to database
         BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
+
+        ViewController viewController = new ViewController();
+        ViewController.launch(ViewController.class);
 
         //execute the method getAllCountries and output.
         System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
