@@ -3,9 +3,9 @@ package com.napier.semgroup.reports;
 
 public class City {
     /*
-    *City's Name
+     *City's Name
      */
-    public String  name;
+    public String name;
 
     /*
      *City's CountryCode
@@ -22,4 +22,9 @@ public class City {
      */
     public Integer population;
 
+    public String toString() {
+        return String.format("%-52s %-5s %-26s %-10s",
+                name, countryCode, district, population);
+
+    }
 }
