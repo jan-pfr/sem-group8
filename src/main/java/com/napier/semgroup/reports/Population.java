@@ -30,4 +30,9 @@ public class Population {
      * The total population of the continent/region/country living not in cities in %.
      */
     public double populationCitiesNotPercent;
+
+    public String toString() {
+        return String.format("%-52s %-26s %-26s %-26s %-26s %-26s",
+                name, totalPopulation, populationCities, populationCitiesNotPercent, populationCitiesPercent, populationCitiesNot);
+    }
 }
