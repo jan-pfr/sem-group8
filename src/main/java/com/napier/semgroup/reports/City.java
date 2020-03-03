@@ -8,9 +8,9 @@ public class City {
     public String name;
 
     /*
-     *City's CountryCode
+     *City's Country
      */
-    public String countryCode;
+    public String country;
 
     /*
      *City's District
@@ -23,8 +23,8 @@ public class City {
     public Integer population;
 
     public String toString() {
-        return String.format("%-52s %-5s %-26s %-10s",
-                name, countryCode, district, population);
+        return String.format("%-37s %-23s %-41s %-10s",
+                name, district, country, population);
 
     }
 }
