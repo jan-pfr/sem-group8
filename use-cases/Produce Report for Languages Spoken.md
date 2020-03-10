@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As an *User* I want *the spoken languages Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
+As an *data scientist* I want *the spoken languages Chinese, English, Hindi, Spanish and Arabic organised by the greatest to smallest number, including the percentage of the world population* so that *I can create a report for my organisation.*
 
 ### Scope
 

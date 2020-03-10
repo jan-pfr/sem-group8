@@ -3,7 +3,7 @@
 
 ### Goal in Context
 
-As an *User* I want *the population of people, people living in cities and people not living in cities for each continent, region and country organised by largest to smallest* so that *I can create a report for my organisation.*
+As an *data scientist* I want *the population of people, people living in cities and people not living in cities for each continent, region and country organised by largest to smallest* so that *I can create a report for my organisation.*
 
 ### Scope
 
