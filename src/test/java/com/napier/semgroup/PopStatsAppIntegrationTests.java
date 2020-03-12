@@ -23,4 +23,10 @@ public class PopStatsAppIntegrationTests {
         a = new PopulationStatsApplication();
 
     }
+
+    @Test
+    void unitTest()
+    {
+        assertEquals(5, 5);
+    }
 }
