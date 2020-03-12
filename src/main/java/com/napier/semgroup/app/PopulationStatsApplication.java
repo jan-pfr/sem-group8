@@ -16,7 +16,14 @@ public class PopulationStatsApplication {
     public static void main (String[] args){
 
         DatabaseConnection dbcon = new MySQLConnectionHandler(); //new object
-        dbcon.connect(); //connection to database
+        if (args.length < 1)
+        {
+            dbcon.connect("localhost:33080");
+        }
+        else
+        {
+            dbcon.connect(args[0]);
+        }
         BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
 
         //execute all methods and output for debug.
