@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PopStatsAppIntegrationTests {
+
     static PopulationStatsApplication a;
     static DatabaseConnection databaseConnection;
     static BusinessLogic businessLogic;
