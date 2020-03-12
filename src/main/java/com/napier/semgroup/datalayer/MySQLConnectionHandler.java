@@ -57,6 +57,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
             try {
                 // Close connection
                 con.close();
+                System.out.println("Connection closed.");
             } catch (Exception e) {
                 System.out.println("Error closing connection to database");
             }

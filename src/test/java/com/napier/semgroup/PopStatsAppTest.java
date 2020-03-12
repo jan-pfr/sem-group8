@@ -1,36 +1,32 @@
 package com.napier.semgroup;
 
+import com.napier.semgroup.app.PopulationStatsApplication;
+import com.napier.semgroup.datalayer.MySQLConnectionHandler;
+import com.napier.semgroup.logic.BusinessLogic;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PopStatsAppTest {
-
-    @Test
-    void unitTest()
+    static PopulationStatsApplication a;
+    static MySQLConnectionHandler mySQLConnectionHandler;
+    static BusinessLogic businessLogic;
+    @BeforeAll
+    static void init()
     {
-        assertEquals(5, 5);
-    }
-    @Test
-    void unitTest6()
-    {
-        assertTrue(5 == 5);
-    }
-
-    @Test
-    void unitTest7()
-    {
-        assertFalse(5 == 4);
+        a = new PopulationStatsApplication();
+        mySQLConnectionHandler = new MySQLConnectionHandler();
+        mySQLConnectionHandler.connect("localhost:33080");
+        businessLogic = new BusinessLogic(mySQLConnectionHandler);
     }
 
     @Test
-    void unitTest8()
-    {
-        assertNull(null);
-    }
+    void validateContinent (){
 
+        assertTrue(businessLogic.validateContinent("Africa"));
+    }
     @Test
-    void unitTest9()
-    {
-        assertNotNull("Hello");
+    void validateRegion(){
+
+        assertTrue(businessLogic.validateRegion("Middle East"));
     }
 }
