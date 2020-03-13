@@ -7,15 +7,18 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PopStatsAppTest {
+
     static PopulationStatsApplication a;
     static MySQLConnectionHandler mySQLConnectionHandler;
     static BusinessLogic businessLogic;
+
+
     @BeforeAll
     static void init()
     {
         a = new PopulationStatsApplication();
         mySQLConnectionHandler = new MySQLConnectionHandler();
-        mySQLConnectionHandler.connect("localhost:3306");
+        mySQLConnectionHandler.connect("localhost:33080");
         businessLogic = new BusinessLogic(mySQLConnectionHandler);
     }
 
