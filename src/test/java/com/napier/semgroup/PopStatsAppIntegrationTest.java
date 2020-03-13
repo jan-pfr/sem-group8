@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PopStatsAppIntegrationTests {
+public class PopStatsAppIntegrationTest {
 
     static PopulationStatsApplication a;
     static MySQLConnectionHandler mySQLConnectionHandler;
