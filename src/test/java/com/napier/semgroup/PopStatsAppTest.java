@@ -38,7 +38,7 @@ public class PopStatsAppTest {
   }
   @Test
     void cityReport(){
-        city.countryCode = "DEU";
+        city.country = "Deutschland";
         city.district = "Baijeri";
         city.name = "Munich";
         city.population = 2390030;

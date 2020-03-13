@@ -42,17 +42,6 @@ public class PopStatsAppIntegrationTest {
     }
 
     @Test
-    void executeQueryAndParseCountries(){
-        String query = "select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
-                "from country \n" +
-                "left join city on Capital=city.ID \n" +
-                "WHERE country.Name = 'Germany' ";
-        for (Country c : businessLogic.executeQueryAndParseCountries(query)) {
-            System.out.println(c);
-        }
-
-    }
-    @Test
     void getAllCountriesOrganizedByPopulation(){
         for (Country c : businessLogic.getAllCountriesOrganizedByPopulation()) {
             System.out.println(c);
