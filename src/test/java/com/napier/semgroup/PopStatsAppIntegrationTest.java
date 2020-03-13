@@ -29,6 +29,18 @@ public class PopStatsAppIntegrationTest {
         mySQLConnectionHandler.connect("localhost:33080");
         businessLogic = new BusinessLogic(mySQLConnectionHandler);
     }
+
+    @Test
+    void validateContinent (){
+
+        assertTrue(businessLogic.validateContinent("Africa"));
+    }
+    @Test
+    void validateRegion(){
+
+        assertTrue(businessLogic.validateRegion("Middle East"));
+    }
+
     @Test
     void executeQueryAndParseCountries(){
         String query = "select country.Name as countryName, city.name as capitalName, country.Code as countryCode, country.Continent as countryContinent, country.Region as countryRegion, country.Population as countryPopulation \n" +
