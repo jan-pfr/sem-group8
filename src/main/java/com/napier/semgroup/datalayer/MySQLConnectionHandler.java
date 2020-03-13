@@ -35,7 +35,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
                 // Wait a bit for db to start
                 Thread.sleep(timer);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?useSSL=false&allowPublicKeyRetrieval=true", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }

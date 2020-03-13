@@ -26,7 +26,7 @@ public class PopStatsAppIntegrationTests {
     {
         a = new PopulationStatsApplication();
         mySQLConnectionHandler = new MySQLConnectionHandler();
-        mySQLConnectionHandler.connect("localhost:3306");
+        mySQLConnectionHandler.connect("localhost:33080");
         businessLogic = new BusinessLogic(mySQLConnectionHandler);
     }
     @Test
