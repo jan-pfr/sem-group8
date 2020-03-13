@@ -24,47 +24,8 @@ public class PopulationStatsApplication {
         {
             dbcon.connect(args[0]);
         }
-        BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
-
-        //execute all methods and output for debug.
-        System.out.println("#1______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getAllCountriesOrganizedByPopulation()) {
-            System.out.println(c);
-        }
-
-        System.out.println("#2______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getAllCountriesInContinentOrganizedByPopulation("Europe")) {
-            System.out.println(c);
-        }
-        System.out.println("#3______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getAllCountriesInRegionOrganizedByPopulation( "Middle East")) {
-            System.out.println(c);
-        }
-        System.out.println("#4______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesOrganizedByPopulation(20)) {
-            System.out.println(c);
-        }
-        System.out.println("#5______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInContinentOrganizedByPopulation(20, "Africa")) {
-            System.out.println(c);
-        }
-        System.out.println("#6______________________________________");
-        System.out.println(String.format("%-3s %-52s %-13s %-26s %-10s %-52s",
-                "Code", "Name", "Continent", "Region", "Population", "Capital"));
-        for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe")) {
-            System.out.println(c);
-        }
-
+        BusinessLogic businessLogic = new BusinessLogic(dbcon);
+        //new object
         dbcon.disconnect(); // disconnect database.
     }
 }
