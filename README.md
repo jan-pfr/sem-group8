@@ -3,6 +3,8 @@
 - Dev Build Status [![Master Build Status](https://travis-ci.com/jan-pfr/sem-group8.svg?branch=develop)](https://travis-ci.com/jan-pfr/sem-group8)
 - License [![LICENSE](https://img.shields.io/github/license/jan-pfr/sem-group8.svg?style=flat-square)](https://github.com/jan-pfr/sem-group8/blob/master/LICENSE)
 - Release [![Releases](https://img.shields.io/github/release/jan-pfr/sem-group8/all.svg?style=flat-square)](https://github.com/jan-pfr/sem-group8/releases)
+- Master Code Coverage [![codecov](https://codecov.io/gh/jan-pfr/sem-group8/branch/master/graph/badge.svg)](https://codecov.io/gh/jan-pfr/sem-group8)
+- Dev Code Coverage [![codecov](https://codecov.io/gh/jan-pfr/sem-group8/branch/develop/graph/badge.svg)](https://codecov.io/gh/jan-pfr/sem-group8)
 
 ### Our Team
 - 40457584 ([jan-pfr](https://github.com/jan-pfr))  __Product Owner__
