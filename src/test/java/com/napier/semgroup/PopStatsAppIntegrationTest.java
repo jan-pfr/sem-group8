@@ -4,7 +4,7 @@ import com.napier.semgroup.app.PopulationStatsApplication;
 import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.datalayer.MySQLConnectionHandler;
 import com.napier.semgroup.logic.BusinessLogic;
-import com.napier.semgroup.reports.Country;
+import com.napier.semgroup.reports.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
