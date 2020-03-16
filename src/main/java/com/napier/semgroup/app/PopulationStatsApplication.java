@@ -30,6 +30,8 @@ public class PopulationStatsApplication {
         cmdUserInterface.clearScreen();
         cmdUserInterface.showMenu();
 
+
+
         //execute all methods and output for debug.
 
         dbcon.disconnect(); // disconnect database.
