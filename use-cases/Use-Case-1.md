@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As an *User* I want *the population of countries in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
+As a *User* I want *the population of countries in the world, continent and region organised by largest to smallest* so that *I can create a report for my organisation.*
 
 ### Scope
 

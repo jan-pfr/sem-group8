@@ -4,6 +4,7 @@ import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.datalayer.MySQLConnectionHandler;
 import com.napier.semgroup.logic.BusinessLogic;
 import com.napier.semgroup.reports.Country;
+import com.napier.semgroup.reports.Population;
 
 /**
  * This class starts you program to easy access population information.
@@ -57,6 +58,25 @@ public class PopulationStatsApplication {
         for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe")) {
             System.out.println(c);
         }
+        System.out.println("#23______________________________________");
+        System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
+                "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
+        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInContinent()) {
+            System.out.println(p);
+        }
+        System.out.println("#25______________________________________");
+        System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
+                "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
+        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInRegion()) {
+            System.out.println(p);
+        }
+        System.out.println("#26______________________________________");
+        System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
+                "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
+        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInCountry()) {
+            System.out.println(p);
+        }
+
 
         dbcon.disconnect(); // disconnect database.
     }
