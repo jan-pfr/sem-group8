@@ -78,7 +78,7 @@ public class BusinessLogic {
         }
     }
 
-    private enum areaFilter {World, Region, Continent, District, Country}
+    public enum areaFilter {World, Region, Continent, District, Country}
 
 
     /// IMPLEMENTATION + PUBLIC FUNCTIONS
@@ -88,7 +88,7 @@ public class BusinessLogic {
     private static final int many = 42069;
 
     // Implements #1 through #6.
-    private List<Country> countriesConditionalPopulation(areaFilter conditionType, String condition, int N)
+    public List<Country> countriesConditionalPopulation(areaFilter conditionType, String condition, int N)
     {
         // This string will contain any conditions we restrict countries to, such as belonging to a specific continent or region
         // In case of searching through the entire world, it will be empty and thus have no effect
@@ -202,7 +202,7 @@ public class BusinessLogic {
     //---
 
     // Implements #7 through #22.
-    private List<City> citiesConditionalPopulation(areaFilter conditionType, String condition, boolean capital, int N)
+    public List<City> citiesConditionalPopulation(areaFilter conditionType, String condition, boolean capital, int N)
     {
         // This string will contain any conditions we restrict cities to, such as belonging to a specific continent or region
         // In case of searching through the entire world, it will be empty and thus have no effect

@@ -5,14 +5,18 @@ import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.datalayer.MySQLConnectionHandler;
 import com.napier.semgroup.logic.BusinessLogic;
 import com.napier.semgroup.reports.*;
+import com.napier.semgroup.ui.CmdUserInterface;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.platform.commons.util.ClassUtils;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -180,6 +184,44 @@ public class PopStatsAppIntegrationTest {
     @Test
     void getPopPopCitiesPopNotCitiesInCountry(){
         assertEquals(239, businessLogic.getPopPopCitiesPopNotCitiesInCountry().size());
+    }
+
+    @Test
+    void executeSQL(){
+        assertNull( mySQLConnectionHandler.execute("Select * from Trains"));
+    }
+    @Test
+    void connect(){
+        mySQLConnectionHandler.connect("localhost:20203");
+}
+    @Test
+    void countriesConditionalPopulation (){
+        assertNull(businessLogic.countriesConditionalPopulation(BusinessLogic.areaFilter.World, "", 0));
+        assertNull(businessLogic.countriesConditionalPopulation(BusinessLogic.areaFilter.Continent, "Edinburgh", 10));
+        assertNull(businessLogic.countriesConditionalPopulation(BusinessLogic.areaFilter.Region, "Edinburgh", 10));
+
+    }
+    @Test
+    void citiesConditionalPopulation(){
+        assertNull(businessLogic.citiesConditionalPopulation(BusinessLogic.areaFilter.World, "", true, 0));
+        assertNull(businessLogic.citiesConditionalPopulation(BusinessLogic.areaFilter.Continent, "Edinburgh", true, 0));
+        assertNull(businessLogic.citiesConditionalPopulation(BusinessLogic.areaFilter.Region, "Edinburgh", true, 0));
+        assertNull(businessLogic.citiesConditionalPopulation(BusinessLogic.areaFilter.Country, "Edinburgh", true, 0));
+        assertNull(businessLogic.citiesConditionalPopulation(BusinessLogic.areaFilter.District, "Edinburgh", true, 0));
+
+    }
+    @Test
+    void noUserInterface(){
+        businessLogic.noUserInterface("headless");
+    }
+    @Test
+    void getUserInterface() {
+        CmdUserInterface cmdUserInterface = new CmdUserInterface(businessLogic);
+        cmdUserInterface.clearScreen();
+        cmdUserInterface.showMenu(false);
+        //Properties prop;
+        //prop =  cmdUserInterface.readPropertiesFile("/noproperties.properties");
+        //assertEquals(null, prop);
     }
 
 

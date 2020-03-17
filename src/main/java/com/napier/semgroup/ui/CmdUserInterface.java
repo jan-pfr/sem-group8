@@ -15,7 +15,7 @@ public class CmdUserInterface {
     public CmdUserInterface(BusinessLogic businessLogic){
         this.businessLogic = businessLogic;
     }
-    public Integer showMenu(){
+    public Integer showMenu(boolean input){
         System.out.println("Welcome to to the Population Information System!");
         System.out.println("Please select one option of the menu provided below by typing the number:");
         System.out.println("_________________________________________________________________________\n");
@@ -32,7 +32,9 @@ public class CmdUserInterface {
             try {
                 Scanner myObj = new Scanner(System.in);
                 System.out.println("Type in a Number:");
+                if (input){
                 menu = myObj.nextInt();
+                }else{menu = 1;}
                 System.out.println("Your choice is: " + prop.getProperty("menu" + menu));
             } catch (Exception e) {
                 System.out.println("Looks like you typed a false number or symbol, try again.");
@@ -47,7 +49,7 @@ public class CmdUserInterface {
         System.out.flush();
     }
 
-    public static Properties readPropertiesFile(String fileName) throws IOException {
+    public Properties readPropertiesFile(String fileName) throws IOException {
         FileInputStream fis = null;
         Properties prop = null;
         try {

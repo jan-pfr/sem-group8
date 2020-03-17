@@ -26,8 +26,8 @@ public class MySQLConnectionHandler implements DatabaseConnection {
         int timer = 1;
         for (int i = 0; i < retries; ++i)
         {
-            if (i >= 5){
-                timer = 30000;
+            if (i >= 7){
+                timer = 5000;
             }
             System.out.println("Connecting to database...");
             try
