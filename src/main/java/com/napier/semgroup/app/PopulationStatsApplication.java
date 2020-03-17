@@ -25,14 +25,18 @@ public class PopulationStatsApplication {
         {
             dbcon.connect(args[0]);
         }
+
         BusinessLogic businessLogic = new BusinessLogic(dbcon); //new object
-        CmdUserInterface cmdUserInterface = new CmdUserInterface(businessLogic);
-        cmdUserInterface.clearScreen();
-        cmdUserInterface.showMenu();
-
-
-
-        //execute all methods and output for debug.
+        if (args.length < 2)
+        {
+            CmdUserInterface cmdUserInterface = new CmdUserInterface(businessLogic);
+            cmdUserInterface.clearScreen();
+            cmdUserInterface.showMenu();
+        }
+        else
+        {
+            businessLogic.noUserInterface(args[1]);
+        }
 
         dbcon.disconnect(); // disconnect database.
     }

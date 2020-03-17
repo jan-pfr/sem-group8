@@ -79,7 +79,7 @@ public class BusinessLogic {
         }
     }
 
-    private enum areaFilter {World, Region, Continent, District, Country};
+    private enum areaFilter {World, Region, Continent, District, Country}
 
 
     /// IMPLEMENTATION + PUBLIC FUNCTIONS
@@ -409,6 +409,11 @@ public class BusinessLogic {
     public List<City> getNCapitalCitiesInRegionOrganizedByPopulation(String regionName, int N)
     {
         return citiesConditionalPopulation(areaFilter.Region, regionName, true, N);
+    }
+    public void noUserInterface(String param){
+        if (param.equals("headless")){
+            System.out.println("It looks like that you started the Application without the UI. Please make sure, that you are not trying to start the UI as a Docker container");
+        }
     }
 
 }
