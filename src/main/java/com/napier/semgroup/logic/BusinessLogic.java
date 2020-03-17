@@ -3,10 +3,13 @@ package com.napier.semgroup.logic;
 import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.reports.*;
 
+import java.beans.JavaBean;
+import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.nio.charset.StandardCharsets;
 
@@ -411,4 +414,99 @@ public class BusinessLogic {
         return citiesConditionalPopulation(areaFilter.Region, regionName, true, N);
     }
 
+    public List<Population> PopPopCitiesPopNotCitiesInX(String location)
+    {
+        try
+        {
+            ArrayList<Population> popList=new ArrayList<Population>();
+
+            //queries database
+            ResultSet rset = databaseConnection.execute("select "+location+", sum(Population) as Population " +
+                    "from country " +
+                    "group by "+location);
+
+            //get Continent and total population
+            while (rset.next()) {
+                Population population = new Population();
+                population.name = rset.getString(location);
+                population.totalPopulation= rset.getLong("Population");
+                popList.add(population);
+            }
+
+            //index location
+            Integer index=0;
+
+            //queries database
+            rset = databaseConnection.execute("select country."+location+" as "+location+", sum(city.Population) as CityPopulation " +
+                    "from city " +
+                    "inner join country on city.CountryCode = country.Code " +
+                    "group by country."+location);
+
+                while (rset.next()) {
+                    Population population=new Population();
+                    population.name = rset.getString(location);
+
+                    for(int i=0;i<popList.size();i++) {
+
+                        //get index
+                        if(popList.get(i).name.equals(population.name))
+                        {
+                            //set population name and total population
+                            population.totalPopulation=popList.get(i).totalPopulation;
+                            //and store index
+                            index=i;
+                        }
+                    }
+
+                    //get query data
+                    population.populationCities=rset.getLong("CityPopulation");
+                    if(population.totalPopulation<=0) {
+                        population.populationCitiesPercent = 0;
+                        population.populationCitiesNot = 0;
+                        population.populationCitiesNotPercent = 0;
+                    }else if (population.populationCities<=0){
+                        population.populationCitiesPercent = 0;
+                        population.populationCitiesNot = population.totalPopulation - population.populationCities;
+                        population.populationCitiesNotPercent = (int) ((population.populationCitiesNot * 100) / population.totalPopulation);
+                        }else{
+                        population.populationCitiesPercent = (int) ((population.populationCities * 100) / population.totalPopulation);
+                        population.populationCitiesNot = population.totalPopulation - population.populationCities;
+                        population.populationCitiesNotPercent = (int) ((population.populationCitiesNot * 100) / population.totalPopulation);
+                    }
+
+                    //set query data with matching list element
+                    popList.set(index,population);
+                }
+
+                return popList;
+
+        } catch (SQLException e)
+        {
+                e.printStackTrace();
+                return null;
+        }
+    }
+
+    // #23 The population of people, people living in cities, and people not living in cities in each continent.
+    public List<Population> PopPopCitiesPopNotCitiesInContinent() {
+        List<Population> popList;
+        popList = PopPopCitiesPopNotCitiesInX("Continent");
+        return popList;
+    }
+
+    // #25 The population of people, people living in cities, and people not living in cities in each region.
+    public List<Population> PopPopCitiesPopNotCitiesInRegion()
+    {
+        List<Population> popList;
+       popList=PopPopCitiesPopNotCitiesInX("Region");
+        return popList;
+    }
+
+    // #26 The population of people, people living in cities, and people not living in cities in each country.
+    public List<Population> PopPopCitiesPopNotCitiesInCountry()
+    {
+        List<Population> popList;
+        popList=PopPopCitiesPopNotCitiesInX("Name");
+        return popList;
+    }
 }
