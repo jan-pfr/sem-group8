@@ -23,7 +23,7 @@ public class MySQLConnectionHandler implements DatabaseConnection {
         }
 
         int retries = 10;
-        int timer = 1000;
+        int timer = 1;
         for (int i = 0; i < retries; ++i)
         {
             if (i >= 5){

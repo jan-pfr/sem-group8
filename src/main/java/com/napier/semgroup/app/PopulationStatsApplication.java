@@ -40,19 +40,19 @@ public class PopulationStatsApplication {
         System.out.println("#23______________________________________");
         System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
                 "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
-        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInContinent()) {
+        for (Population p : businessLogic.getPopPopCitiesPopNotCitiesInContinent()) {
             System.out.println(p);
         }
         System.out.println("#25______________________________________");
         System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
                 "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
-        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInRegion()) {
+        for (Population p : businessLogic.getPopPopCitiesPopNotCitiesInRegion()) {
             System.out.println(p);
         }
         System.out.println("#26______________________________________");
         System.out.println(String.format("%-32s %-32s %-32s %-32s %-32s %-32s",
                 "Location","TotalPopulation","PopulationCities","PopulationCitiesPercent","PopulationNotInCities","PopulationNotInCitiesPercent"));
-        for (Population p : businessLogic.PopPopCitiesPopNotCitiesInCountry()) {
+        for (Population p : businessLogic.getPopPopCitiesPopNotCitiesInCountry()) {
             System.out.println(p);
         }
         dbcon.disconnect(); // disconnect database.

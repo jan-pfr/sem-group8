@@ -8,9 +8,11 @@ import com.napier.semgroup.reports.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.junit.platform.commons.util.ClassUtils;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,154 +45,119 @@ public class PopStatsAppIntegrationTest {
 
     @Test
     void getAllCountriesOrganizedByPopulation(){
-        for (Country c : businessLogic.getAllCountriesOrganizedByPopulation()) {
-            System.out.println(c);
-        }
-
+        assertEquals("China",businessLogic.getAllCountriesOrganizedByPopulation().get(0).name);
     }
     @Test
     void getAllCountriesInContinentOrganizedByPopulation() {
-
-        for (Country c : businessLogic.getAllCountriesInContinentOrganizedByPopulation("Europe")) {
-            System.out.println(c);
-        }
+        assertEquals("Germany", businessLogic.getAllCountriesInContinentOrganizedByPopulation("Europe").get(1).name);
     }
     @Test
     void getAllCountriesInRegionOrganizedByPopulation(){
-        for (Country c : businessLogic.getAllCountriesInRegionOrganizedByPopulation( "Middle East")) {
-            System.out.println(c);
-        }
+        assertEquals("Turkey",businessLogic.getAllCountriesInRegionOrganizedByPopulation( "Middle East").get(0).name);
     }
     @Test
     void getNCountriesOrganizedByPopulation(){
-        for (Country c : businessLogic.getNCountriesOrganizedByPopulation(20)) {
-            System.out.println(c);
-        }
+        assertEquals(20,businessLogic.getNCountriesOrganizedByPopulation(20).size());
     }
 
     @Test
     void getNCountriesInContinentOrganizedByPopulation() {
-        for (Country c : businessLogic.getNCountriesInContinentOrganizedByPopulation(20, "Africa")) {
-            System.out.println(c);
-        }
+        assertEquals(20, businessLogic.getNCountriesInContinentOrganizedByPopulation(20, "Africa").size());
+        assertEquals("Nigeria", businessLogic.getNCountriesInContinentOrganizedByPopulation(20, "Africa").get(0).name);
     }
     @Test
     void getNCountriesInRegionOrganizedByPopulation() {
-        for (Country c : businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe")) {
-            System.out.println(c);
-        }
+        assertEquals (15, businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe").size());
+        assertEquals ("Italy", businessLogic.getNCountriesInRegionOrganizedByPopulation(20, "Southern Europe").get(0).name);
     }
 
     @Test
     void getAllCitiesOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCitiesOrganizedByPopulation()) {
-            System.out.println(c);
-        }
+       assertEquals(4079, businessLogic.getAllCitiesOrganizedByPopulation().size());
     }
 
     @Test
     void getAllCitiesInContinentOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCitiesInContinentOrganizedByPopulation("South America")) {
-            System.out.println(c);
-        }
+        assertEquals(470, businessLogic.getAllCitiesInContinentOrganizedByPopulation("South America").size());
     }
 
     @Test
     void getAllCitiesInRegionOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCitiesInRegionOrganizedByPopulation("Middle East")) {
-            System.out.println(c);
-        }
+        assertEquals (174, businessLogic.getAllCitiesInRegionOrganizedByPopulation("Middle East").size());
+        assertEquals ("Istanbul", businessLogic.getAllCitiesInRegionOrganizedByPopulation("Middle East").get(0).name);
     }
 
     @Test
     void getAllCitiesInCountryOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCitiesInCountryOrganizedByPopulation("Poland")) {
-            System.out.println(c);
-        }
+       assertEquals(44, businessLogic.getAllCitiesInCountryOrganizedByPopulation("Poland").size());
     }
 
     @Test
     void getAllCitiesInDistrictOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCitiesInDistrictOrganizedByPopulation("Hokkaido")) {
-            System.out.println(c);
-        }
+        assertEquals(10, businessLogic.getAllCitiesInDistrictOrganizedByPopulation("Hokkaido").size());
     }
 
     @Test
     void getNCitiesOrganizedByPopulation() {
-        for (City c : businessLogic.getNCitiesOrganizedByPopulation(12)) {
-            System.out.println(c);
-        }
+        assertEquals (12, businessLogic.getNCitiesOrganizedByPopulation(12).size());
+        assertEquals ("Seoul", businessLogic.getNCitiesOrganizedByPopulation(12).get(1).name);
     }
 
     @Test
     void getNCitiesInContinentOrganizedByPopulation() {
-        for (City c : businessLogic.getNCitiesInContinentOrganizedByPopulation("North America", 17)) {
-            System.out.println(c);
-        }
+        assertEquals (17, businessLogic.getNCitiesInContinentOrganizedByPopulation("North America", 17).size());
+        assertEquals("New York", businessLogic.getNCitiesInContinentOrganizedByPopulation("North America", 17).get(1).name);
     }
 
     @Test
     void getNCitiesInRegionOrganizedByPopulation() {
-        for (City c : businessLogic.getNCitiesInRegionOrganizedByPopulation("Baltic Countries", 5)) {
-            System.out.println(c);
-        }
+        assertEquals(5,businessLogic.getNCitiesInRegionOrganizedByPopulation("Baltic Countries", 5).size());
+        assertEquals("Riga",businessLogic.getNCitiesInRegionOrganizedByPopulation("Baltic Countries", 5).get(0).name);
     }
 
     @Test
     void getNCitiesInCountryOrganizedByPopulation() {
-        for (City c : businessLogic.getNCitiesInCountryOrganizedByPopulation("France", 8)) {
-            System.out.println(c);
-        }
+        assertEquals(8, businessLogic.getNCitiesInCountryOrganizedByPopulation("France", 8).size());
+        assertEquals("Paris", businessLogic.getNCitiesInCountryOrganizedByPopulation("France", 8).get(0).name);
     }
 
     @Test
     void getNCitiesInDistrictOrganizedByPopulation() {
-        for (City c : businessLogic.getNCitiesInDistrictOrganizedByPopulation("England", 11)) {
-            System.out.println(c);
-        }
+        assertEquals (11, businessLogic.getNCitiesInDistrictOrganizedByPopulation("England", 11).size());
+        assertEquals ("London", businessLogic.getNCitiesInDistrictOrganizedByPopulation("England", 11).get(0).name);
     }
 
     @Test
     void getAllCapitalCitiesOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCapitalCitiesOrganizedByPopulation()) {
-            System.out.println(c);
-        }
+        assertEquals(232, businessLogic.getAllCapitalCitiesOrganizedByPopulation().size());
     }
 
     @Test
     void getAllCapitalCitiesInContinentOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCapitalCitiesInContinentOrganizedByPopulation("Oceania")) {
-            System.out.println(c);
-        }
+        assertEquals (27, businessLogic.getAllCapitalCitiesInContinentOrganizedByPopulation("Oceania").size());
     }
 
     @Test
     void getAllCapitalCitiesInRegionOrganizedByPopulation() {
-        for (City c : businessLogic.getAllCapitalCitiesInRegionOrganizedByPopulation("Central Africa")) {
-            System.out.println(c);
-        }
+        assertEquals (9, businessLogic.getAllCapitalCitiesInRegionOrganizedByPopulation("Central Africa").size());
+        assertEquals ("Kinshasa", businessLogic.getAllCapitalCitiesInRegionOrganizedByPopulation("Central Africa").get(0).name);
     }
 
     @Test
     void getNCapitalCitiesOrganizedByPopulation() {
-        for (City c : businessLogic.getNCapitalCitiesOrganizedByPopulation(7)) {
-            System.out.println(c);
-        }
+        assertEquals(7, businessLogic.getNCapitalCitiesOrganizedByPopulation(7).size());
     }
 
     @Test
     void getNCapitalCitiesInContinentOrganizedByPopulation() {
-        for (City c : businessLogic.getNCapitalCitiesInContinentOrganizedByPopulation("Europe", 9)) {
-            System.out.println(c);
-        }
+        assertEquals(9, businessLogic.getNCapitalCitiesInContinentOrganizedByPopulation("Europe", 9).size());
+        assertEquals("Moscow", businessLogic.getNCapitalCitiesInContinentOrganizedByPopulation("Europe", 9).get(0).name);
     }
 
     @Test
     void getNCapitalCitiesInRegionOrganizedByPopulation() {
-        for (City c : businessLogic.getNCapitalCitiesInRegionOrganizedByPopulation("Polynesia", 6)) {
-            System.out.println(c);
-        }
+        assertEquals (6, businessLogic.getNCapitalCitiesInRegionOrganizedByPopulation("Polynesia", 6).size());
+        assertEquals ("Apia", businessLogic.getNCapitalCitiesInRegionOrganizedByPopulation("Polynesia", 6).get(0).name);
     }
     
 
@@ -200,6 +167,20 @@ public class PopStatsAppIntegrationTest {
        mySQLConnectionHandler.connect("localhost:33080");
     }
 
+    @Test
+    void getPopPopCitiesPopNotCitiesInContinent(){
+        assertEquals(7, businessLogic.getPopPopCitiesPopNotCitiesInContinent().size());
+    }
+
+    @Test
+    void getPopPopCitiesPopNotCitiesInRegion(){
+        assertEquals(25, businessLogic.getPopPopCitiesPopNotCitiesInRegion().size());
+    }
+
+    @Test
+    void getPopPopCitiesPopNotCitiesInCountry(){
+        assertEquals(239, businessLogic.getPopPopCitiesPopNotCitiesInCountry().size());
+    }
 
 
 }

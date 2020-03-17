@@ -3,15 +3,11 @@ package com.napier.semgroup.logic;
 import com.napier.semgroup.datalayer.DatabaseConnection;
 import com.napier.semgroup.reports.*;
 
-import java.beans.JavaBean;
-import java.sql.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.nio.charset.StandardCharsets;
 
 public class BusinessLogic {
 
@@ -419,11 +415,11 @@ public class BusinessLogic {
         }
     }
 
-    public List<Population> PopPopCitiesPopNotCitiesInX(String location)
+    public List<Population> getPopPopCitiesPopNotCitiesInX(String location)
     {
         try
         {
-            ArrayList<Population> popList=new ArrayList<Population>();
+            ArrayList<Population> popList=new ArrayList<>();
 
             //queries database
             ResultSet rset = databaseConnection.execute("select "+location+", sum(Population) as Population " +
@@ -439,7 +435,7 @@ public class BusinessLogic {
             }
 
             //index location
-            Integer index=0;
+            Integer index = 0;
 
             //queries database
             rset = databaseConnection.execute("select country."+location+" as "+location+", sum(city.Population) as CityPopulation " +
@@ -493,25 +489,25 @@ public class BusinessLogic {
     }
 
     // #23 The population of people, people living in cities, and people not living in cities in each continent.
-    public List<Population> PopPopCitiesPopNotCitiesInContinent() {
+    public List<Population> getPopPopCitiesPopNotCitiesInContinent() {
         List<Population> popList;
-        popList = PopPopCitiesPopNotCitiesInX("Continent");
+        popList = getPopPopCitiesPopNotCitiesInX("Continent");
         return popList;
     }
 
     // #25 The population of people, people living in cities, and people not living in cities in each region.
-    public List<Population> PopPopCitiesPopNotCitiesInRegion()
+    public List<Population> getPopPopCitiesPopNotCitiesInRegion()
     {
         List<Population> popList;
-       popList=PopPopCitiesPopNotCitiesInX("Region");
+       popList= getPopPopCitiesPopNotCitiesInX("Region");
         return popList;
     }
 
     // #26 The population of people, people living in cities, and people not living in cities in each country.
-    public List<Population> PopPopCitiesPopNotCitiesInCountry()
+    public List<Population> getPopPopCitiesPopNotCitiesInCountry()
     {
         List<Population> popList;
-        popList=PopPopCitiesPopNotCitiesInX("Name");
+        popList= getPopPopCitiesPopNotCitiesInX("Name");
         return popList;
     }
 }
