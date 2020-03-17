@@ -20,7 +20,7 @@ public class Population {
     /*
      * The total population of the continent/region/country living in cities in %.
      */
-    public int populationCitiesPercent;
+    public double populationCitiesPercent;
     /*
      * The total population of the continent/region/country living not in cities.
      */
@@ -29,7 +29,7 @@ public class Population {
     /*
      * The total population of the continent/region/country living not in cities in %.
      */
-    public int populationCitiesNotPercent;
+    public double populationCitiesNotPercent;
 
     public String toString() {
         return String.format("%-52s %-26s %-26s %-26s %-26s %-26s",
