@@ -6,6 +6,9 @@
 - Master Code Coverage [![codecov](https://codecov.io/gh/jan-pfr/sem-group8/branch/master/graph/badge.svg)](https://codecov.io/gh/jan-pfr/sem-group8)
 - Dev Code Coverage [![codecov](https://codecov.io/gh/jan-pfr/sem-group8/branch/develop/graph/badge.svg)](https://codecov.io/gh/jan-pfr/sem-group8)
 
+This development of this project has been completed.
+
+
 ### Our Team
 - 40457584 ([jan-pfr](https://github.com/jan-pfr))  __Product Owner__
 - 40457307 ([caelumn](https://github.com/caelumn)) __Scrum Master__
